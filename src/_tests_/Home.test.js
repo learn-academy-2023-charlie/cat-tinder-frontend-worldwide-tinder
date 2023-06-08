@@ -5,6 +5,19 @@ import Home from "../pages/Home"
 describe ("<Home />", () => {
 
     it("renders without crashing", () => {
+      render(
+        <BrowserRouter>
+          <Home />
+        </BrowserRouter>
+      );
+
+        const page = screen.getByTestId("home");
+
+        expect(page).toBeInTheDocument;
+    });
+
+
+    it("displays welcome message", () => {
 
         render(
             <BrowserRouter>

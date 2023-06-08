@@ -3,12 +3,17 @@ import { BrowserRouter } from "react-router-dom";
 import Footer from "../components/Footer";
 
 describe("<Footer />", () => {
-  it("has nav bar", () => {
+  it("rnders without crashing", () => {
     render(
       <BrowserRouter>
         <Footer />
       </BrowserRouter>
     );
+
+    const component = screen.getByTestId('footer')
+
+    expect(component).toBeInTheDocument
+
   });
 
   it("has a link", () => {

@@ -2,13 +2,17 @@ import { render, screen } from "@testing-library/react";
 import { BrowserRouter } from "react-router-dom";
 import NotFound from "../pages/NotFound";
 
-describe("<Footer />", () => {
+describe("<NotFound />", () => {
   it("renders without crashing", () => {
     render(
       <BrowserRouter>
         <NotFound />
       </BrowserRouter>
     );
+
+    const page = screen.getByTestId("notfound");
+
+    expect(page).toBeInTheDocument;
   });
 
   it("has an img", () => {

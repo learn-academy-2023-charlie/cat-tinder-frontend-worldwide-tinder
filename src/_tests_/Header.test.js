@@ -3,12 +3,16 @@ import { BrowserRouter } from "react-router-dom";
 import Header from "../components/Header";
 
 describe("<Header />", () => {
-  it("has nav bar", () => {
+  it("renders without crashing", () => {
     render(
       <BrowserRouter>
         <Header />
       </BrowserRouter>
     );
+
+    const component = screen.getByTestId("header");
+
+    expect(component).toBeInTheDocument;
   });
 
   it("has attributes assigned to the image", () => {
