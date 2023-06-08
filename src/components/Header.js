@@ -10,7 +10,7 @@ function Header() {
         <a href="/">
           <img 
             src="https://see.fontimg.com/api/renderfont4/nRnX1/eyJyIjoiZHciLCJoIjoxMzQsInciOjIwMDAsImZzIjo2NywiZmdjIjoiIzAwMDAwMCIsImJnYyI6IiNGRkZGRkYifQ/YW1lcmljYW4/font-arabic-flags.png" 
-            alt="Cat fonts" 
+            alt="country flags" 
             height="20" 
           />
         </a>
