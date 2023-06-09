@@ -1,8 +1,36 @@
 import React from "react"
+import { Card, CardBody, CardTitle, Button } from "reactstrap"
+import { NavLink } from "react-router-dom"
 
-function CountryIndex() {
+function CountryIndex({countries}) {
   return (<>
-    <h1>Country Index</h1>
+    <div id="country-index-card" data-testid= "countryindex">
+      {countries?.map((value, index) => {
+        return(
+          <Card
+            style={{
+              width: '18rem'
+            }}
+            key={index}
+          >
+            <img
+              alt={`image of ${value.name} the country's flag`}
+              src={value.image}
+            />
+            <CardBody>
+              <CardTitle tag="h5">
+                {value.name}
+              </CardTitle>
+              <Button>
+                <NavLink to={`/countryshow/${value.id}`}>
+                  Click to View Meow
+                </NavLink>
+              </Button>
+            </CardBody>
+          </Card>
+        )
+      })}
+    </div>
   </>
   );
 }
