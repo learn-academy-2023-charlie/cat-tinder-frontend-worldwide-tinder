@@ -1,27 +1,19 @@
-import { render, screen } from '@testing-library/react'
-import { BrowserRouter } from 'react-router-dom'
-import CountryNew from '../pages/CountryNew'
+import { render, screen } from "@testing-library/react";
+import { BrowserRouter } from "react-router-dom";
+import CountryNew from "../pages/CountryNew";
 
-describe('<CountryNew />', () => {
-    
-    beforeEach(() => {
-        render(
-            <BrowserRouter>
-                <CountryNew />
-            </BrowserRouter>
-        )
-    })
-
-  it("renders without crashing", () => {
+describe("<CountryNew />", () => {
+  beforeEach(() => {
     render(
       <BrowserRouter>
         <CountryNew />
       </BrowserRouter>
     );
-
-    const container = document.querySelector('#app');
-
-    expect(container).toBeInTheDocument;
   });
 
-})
+  it("renders country-name field", () => {
+    const element = screen.getByLabelText(/name/i);
+
+    expect(element).toBeInTheDocument();
+  });
+});
