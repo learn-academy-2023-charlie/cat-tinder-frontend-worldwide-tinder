@@ -17,7 +17,6 @@ function App() {
     <>
       <Header />
       <Routes>
-        {" "}
         <Route path="/" element={<Home />} />
         <Route path="/countryedit" element={<CountryEdit countries={countries} />} />
         <Route path="/countryindex" element={<CountryIndex countries={countries} />} />
