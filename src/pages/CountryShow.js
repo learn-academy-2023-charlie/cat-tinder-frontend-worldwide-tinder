@@ -8,7 +8,7 @@ const CountryShow = ({countries}) => {
     return country.id === +id
   })
   return(
-    <main className="card" data-testid='countryshow'>
+    <main className="card" id='countryshow'>
       {currentCountry && (
         <Card
           style={{

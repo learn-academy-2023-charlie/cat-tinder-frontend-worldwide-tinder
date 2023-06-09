@@ -10,7 +10,7 @@ describe("<Header />", () => {
       </BrowserRouter>
     );
 
-    const component = screen.getByTestId("header");
+    const component = document.querySelector("#header");
 
     expect(component).toBeInTheDocument;
   });

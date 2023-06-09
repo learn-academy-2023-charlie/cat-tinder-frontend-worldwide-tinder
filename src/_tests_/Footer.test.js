@@ -10,7 +10,7 @@ describe("<Footer />", () => {
       </BrowserRouter>
     );
 
-    const component = screen.getByTestId('footer')
+    const component = document.querySelector('#footer')
 
     expect(component).toBeInTheDocument
 

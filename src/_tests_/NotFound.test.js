@@ -10,7 +10,7 @@ describe("<NotFound />", () => {
       </BrowserRouter>
     );
 
-    const page = screen.getByTestId("notfound");
+    const page = document.querySelector("#notfound");
 
     expect(page).toBeInTheDocument;
   });

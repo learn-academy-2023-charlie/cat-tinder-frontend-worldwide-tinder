@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom"
 
 function CountryIndex({countries}) {
   return (<>
-    <div id="country-index-card" data-testid= "countryindex">
+    <div id="country-index-card">
       {countries?.map((value, index) => {
         return(
           <Card
