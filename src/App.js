@@ -12,7 +12,13 @@ import React, { useState } from "react";
 import "./App.css";
 
 function App() {
+
   const [countries, setCountries] = useState(mockCountries);
+  
+  const createCountry = (createdCountry) => {
+      console.log("my created country:", createdCountry);
+  }
+  
   return (
     <>
       <Header />
@@ -20,12 +26,10 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/countryedit" element={<CountryEdit countries={countries} />} />
         <Route path="/countryindex" element={<CountryIndex countries={countries} />} />
-        <Route path="/countrynew" element={<CountryNew countries={countries} />} />
+        <Route path="/countrynew" element={<CountryNew createCountry={createCountry} />} />
         <Route path="/countryshow/:id" element={<CountryShow countries={countries} />} />
         <Route path="/*" element={<NotFound />} />
-      </Routes>
-
-      <h1>Rashaan and Will's World Wide Tinder App</h1>
+      </Routes> 
       <Footer />
     </>
   );
