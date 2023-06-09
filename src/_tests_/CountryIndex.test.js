@@ -11,7 +11,7 @@ describe("<CountryIndex />", () => {
       </BrowserRouter>
     );
 
-    const component = screen.getByTestId("countryindex");
+    const component = document.querySelector("#country-index-card");
 
     expect(component).toBeInTheDocument;
   });

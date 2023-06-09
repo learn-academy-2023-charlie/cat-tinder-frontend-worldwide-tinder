@@ -4,7 +4,7 @@ import { Navbar } from "reactstrap"
 function Header() {
   return (
     <>
-      <div data-testid="header">
+      <div id="header">
         <Navbar className="my-2" color="info">
           <a href="/">
             <img

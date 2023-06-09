@@ -3,7 +3,7 @@ import React from "react"
 function NotFound() {
   return (
     <>
-      <div data-testid="notfound">
+      <div id="notfound">
         <h1>Not found</h1>
         <a href="/">
           <img

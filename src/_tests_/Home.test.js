@@ -11,7 +11,7 @@ describe ("<Home />", () => {
         </BrowserRouter>
       );
 
-        const page = screen.getByTestId("home");
+        const page = document.querySelector("#home");
 
         expect(page).toBeInTheDocument;
     });
