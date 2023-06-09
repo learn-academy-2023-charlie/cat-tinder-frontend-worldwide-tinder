@@ -3,7 +3,7 @@ import { BrowserRouter } from "react-router-dom";
 import Footer from "../components/Footer";
 
 describe("<Footer />", () => {
-  it("rnders without crashing", () => {
+  it("renders without crashing", () => {
     render(
       <BrowserRouter>
         <Footer />

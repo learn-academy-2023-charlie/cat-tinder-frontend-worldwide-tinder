@@ -19,10 +19,10 @@ function App() {
       <Routes>
         {" "}
         <Route path="/" element={<Home />} />
-        <Route path="/countryedit" element={<CountryEdit />} />
-        <Route path="/countryindex" element={<CountryIndex />} />
-        <Route path="/countrynew" element={<CountryNew />} />
-        <Route path="/countryshow" element={<CountryShow />} />
+        <Route path="/countryedit" element={<CountryEdit countries={countries} />} />
+        <Route path="/countryindex" element={<CountryIndex countries={countries} />} />
+        <Route path="/countrynew" element={<CountryNew countries={countries} />} />
+        <Route path="/countryshow/:id" element={<CountryShow countries={countries} />} />
         <Route path="/*" element={<NotFound />} />
       </Routes>
 
