@@ -1,13 +1,14 @@
 import React from "react"
 import { useParams } from "react-router-dom"
 import { Card, CardBody, CardTitle, CardSubtitle, CardText } from "reactstrap"
+import { NavLink } from "react-router-dom"
 
 const CountryShow = ({countries}) => {
-  const { id } = useParams()
+  const {id} = useParams()
   let currentCountry = countries?.find((country) => {
     return country.id === +id
   })
-  return(
+  return(<>
     <main className="card" id='countryshow'>
       {currentCountry && (
         <Card
@@ -36,9 +37,10 @@ const CountryShow = ({countries}) => {
               {currentCountry.hobby}
             </CardText>
           </CardBody>
+          <button><NavLink to={`/countryedit/${currentCountry.id}`} className="nav-link"> Edit Country Profile</NavLink></button>
         </Card>
       )}
-    </main>
+    </main></>
   )
 }
 
