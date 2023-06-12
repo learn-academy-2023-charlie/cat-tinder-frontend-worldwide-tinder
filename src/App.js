@@ -18,10 +18,7 @@ function App() {
   //   console.log("my created country:", createdCountry);
   // };
 
-  const updateCountry = (country, id) => {
-    console.log(country);
-    console.log(id);
-  };
+
 
   useEffect(() => {
     readCountry();
@@ -51,6 +48,19 @@ function App() {
       .then((payload) => readCountry())
       .catch((errors) => console.log("Country create errors:", errors));
   }
+
+  const updateCountry = (country, id) => {
+    fetch(`http://localhost:3000/countries/${id}`, {
+      body: JSON.stringify(country),
+      headers: {
+        "Content-Type": "application/json",
+      },
+      method: "PATCH",
+    })
+    .then((response) => response.json())
+    .then((payload) => updateCountry(payload))
+    .catch((errors) => console.log("Country create errors:", errors));
+  };
 
 
 
