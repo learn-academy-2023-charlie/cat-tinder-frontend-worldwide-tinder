@@ -18,13 +18,17 @@ function App() {
   const createCountry = (createdCountry) => {
       console.log("my created country:", createdCountry);
   }
+  const updateCountry = (country,id) => {
+    console.log(country);
+    console.log(id)
+  }
   
   return (
     <>
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/countryedit" element={<CountryEdit countries={countries} />} />
+        <Route path="/countryedit/:id" element={<CountryEdit countries={countries} updateCountry={updateCountry} />} />
         <Route path="/countryindex" element={<CountryIndex countries={countries} />} />
         <Route path="/countrynew" element={<CountryNew createCountry={createCountry} />} />
         <Route path="/countryshow/:id" element={<CountryShow countries={countries} />} />
