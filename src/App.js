@@ -22,6 +22,8 @@ function App() {
     console.log(country);
     console.log(id)
   }
+
+  
   
   return (
     <>

@@ -5,7 +5,7 @@ function Home() {
     <>
       <div id="home">
         <section className="banner-section">
-          <h1>Welcome, Countries!</h1>
+          <h1>Welcome to Country Tinder!</h1>
         </section>
       </div>
     </>
