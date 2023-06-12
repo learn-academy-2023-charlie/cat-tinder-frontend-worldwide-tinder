@@ -6,10 +6,10 @@ function CountryIndex({countries}) {
   return (<>
     <div id="country-index-card">
       {countries?.map((value, index) => {
-        return(
+        return (
           <Card
             style={{
-              width: '18rem'
+              width: "18rem",
             }}
             key={index}
           >
@@ -18,9 +18,9 @@ function CountryIndex({countries}) {
               src={value.image}
             />
             <CardBody>
-              <CardTitle tag="h5">
-                {value.name}
-              </CardTitle>
+              <CardTitle tag="h5">{value.name}</CardTitle>
+              <CardTitle tag="h5">{value.age}</CardTitle>
+              <CardTitle tag="h5">{value.hobby}</CardTitle>
               <Button>
                 <NavLink to={`/countryshow/${value.id}`}>
                   Click to View Meow
@@ -28,7 +28,7 @@ function CountryIndex({countries}) {
               </Button>
             </CardBody>
           </Card>
-        )
+        );
       })}
     </div>
   </>
